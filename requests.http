@@ -1,0 +1,14 @@
+### Get all messages
+GET http://localhost:3000/messages
+
+### Create a message
+POST http://localhost:3000/messages
+Content-Type: application/json
+
+{
+    "content": "this is my first message",
+    "date": "2024-02-18:7:14PM"
+}
+
+### Get message by Id
+GET http://localhost:3000/messages/12345
