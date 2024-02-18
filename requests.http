@@ -7,7 +7,7 @@ Content-Type: application/json
 
 {
     "content": "this is my first message",
-    "date": "2024-02-18:7:14PM"
+    "date": "2020-07-10 15:00:00.000"
 }
 
 ### Get message by Id
