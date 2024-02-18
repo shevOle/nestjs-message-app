@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Req, Res } from '@nestjs/common';
+import { Controller, Get, Post, Body, Param } from '@nestjs/common';
 
 @Controller('messages')
 export class MessagesController {
@@ -8,14 +8,12 @@ export class MessagesController {
     }
 
     @Post()
-    createMessage(@Req() req, @Res() res) {
-        const { body } = req;
-        return res.send(`you want to create a message with this data: ${JSON.stringify(body)}`)
+    createMessage(@Body() body: any,) {
+        return `you want to create a message with this data (upd): ${JSON.stringify(body)}`
     }
 
     @Get('/:id')
-    getMessageById(@Req() req, @Res() res) {
-        const { id } = req.params;
-        return res.send(`you want to get message with id: ${id}`)
+    getMessageById(@Param('id') id: string) {
+        return `you want to get message with id (upd): ${id}`
     }
 }
